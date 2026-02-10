@@ -297,6 +297,103 @@
         .timeline-item:nth-child(even)::after {
             left: -12px;
         }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 20px;
+        }
+        
+        .project-header h3 {
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        
+        .tech-tag {
+            background-color: var(--light-gray);
+            color: var(--dark);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .project-features {
+            margin-top: 20px;
+        }
+        
+        .project-features h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .project-features ul {
+            padding-left: 20px;
+        }
+        
+        .project-features li {
+            margin-bottom: 8px;
+        }
+        
+        .project-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .project-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+        
+        .project-links a:hover {
+            color: var(--secondary);
+        }
         
         /* Skills */
         .skills-container {
@@ -669,56 +766,247 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" style="background-color: #f8fafc;">
+    <section id="projects">
         <div class="container">
             <div class="section-title">
-                <h2>Skills</h2>
+                <h2>Projects</h2>
+                <p>Academic and collaborative development work</p>
             </div>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Technical Skills</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">C#</span>
-                        <span class="skill-item">Java</span>
-                        <span class="skill-item">.NET MAUI</span>
-                        <span class="skill-item">ASP.NET Core</span>
-                        <span class="skill-item">REST APIs</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">Entity Framework</span>
-                        <span class="skill-item">LINQ</span>
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Android (Java)</span>
-                        <span class="skill-item">JSON</span>
-                        <span class="skill-item">HTTP requests</span>
-                        <span class="skill-item">API integration</span>
-                        <span class="skill-item">Database-driven applications</span>
+            <div class="projects-grid">
+                <!-- Project 1: UJ FoodLink -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>UJ FoodLink</h3>
+                        <div class="project-meta">
+                            <span>Team: Logic Legends</span>
+                            <span>3rd Year Project</span>
+                        </div>
+                        <div>University of Johannesburg • 2024</div>
+                    </div>
+                    <div class="project-content">
+                        <p>A comprehensive food assistance management system designed to streamline meal package distribution for students, addressing key challenges in the university's existing process.</p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">.NET Framework</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Mobile App</span>
+                            <span class="tech-tag">Web Admin</span>
+                            <span class="tech-tag">Database</span>
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Key Solutions Implemented:</h4>
+                            <ul>
+                                <li><strong>Multi-platform System</strong>: Web portal for managers, mobile apps for students and packagers</li>
+                                <li><strong>University Database Integration</strong>: Validates student bursary status to prevent system abuse</li>
+                                <li><strong>Customizable Meal Preferences</strong>: Allows students to filter/choose meal package contents based on allergies/preferences</li>
+                                <li><strong>Notification System</strong>: Alerts students when packages are ready, reducing long queues</li>
+                                <li><strong>Secure Application Process</strong>: Prevents fraudulent applications through system validation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Problem Statement Addressed:</h4>
+                            <ul>
+                                <li>Inaccessible/crashing application systems</li>
+                                <li>Lack of validation allowing system abuse</li>
+                                <li>Fixed meal packages not accommodating allergies/preferences</li>
+                                <li>Long collection queues disrupting classes</li>
+                                <li>Poor communication about collection dates</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-user"></i> Soft Skills</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Problem-solving</span>
-                        <span class="skill-item">Analytical thinking</span>
-                        <span class="skill-item">Debugging</span>
-                        <span class="skill-item">Communication</span>
-                        <span class="skill-item">Teamwork</span>
-                        <span class="skill-item">Adaptability</span>
-                        <span class="skill-item">Proactive</span>
-                        <span class="skill-item">Fast learner</span>
-                        <span class="skill-item">Works well under pressure</span>
+                
+                <!-- Project 2: Sentiments E-Commerce -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Sentiments E-Commerce Web</h3>
+                        <div class="project-meta">
+                            <span>Group Project</span>
+                            <span>2nd Year Project</span>
+                        </div>
+                        <div>University of Johannesburg • 2023</div>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-language"></i> Languages</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">English</span>
-                        <span class="skill-item">Northern Sotho</span>
+                    <div class="project-content">
+                        <p>A full-stack e-commerce web application developed as a collaborative academic project with 3 group members, implementing core online shopping functionality.</p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">XAMPP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SCSS/CSS</span>
+                            <span class="tech-tag">HTML</span>
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Technical Implementation:</h4>
+                            <ul>
+                                <li><strong>Backend</strong>: PHP server-side scripting for business logic and data processing</li>
+                                <li><strong>Database</strong>: MySQL managed through XAMPP for product, user, and transaction data</li>
+                                <li><strong>Frontend</strong>: Responsive interface with HTML, CSS (SCSS 34.7%), and JavaScript (15.3%)</li>
+                                <li><strong>Version Control</strong>: Collaborative development using Git for source code management</li>
+                                <li><strong>Full Stack Integration</strong>: Connected database, server-side logic, and client-facing interface</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-features">
+                            <h4>Project Scope:</h4>
+                            <ul>
+                                <li>Product catalog and shopping cart functionality</li>
+                                <li>User authentication and account management</li>
+                                <li>Database-driven product inventory</li>
+                                <li>Secure transaction processing</li>
+                                <li>Responsive design for various devices</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/Thobs-Tricks/sentiments" target="_blank">
+                                <i class="fab fa-github"></i> View Repository
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Skills Section -->
+   <section id="skills" style="background-color: #f8fafc;">
+    <div class="container">
+        <div class="section-title">
+            <h2>Technical Skills & Tools</h2>
+        </div>
+        <div class="skills-container">
+            <!-- Programming Languages -->
+            <div class="skill-category">
+                <h3><i class="fas fa-laptop-code"></i> Programming Languages</h3>
+                <div class="skill-items">
+                    <span class="skill-item">C#</span>
+                    <span class="skill-item">Java</span>
+                    <span class="skill-item">PHP</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">HTML5</span>
+                    <span class="skill-item">CSS3/SCSS</span>
+                    <span class="skill-item">SQL</span>
+                </div>
+            </div>
+            
+            <!-- Frameworks & Platforms -->
+            <div class="skill-category">
+                <h3><i class="fas fa-cogs"></i> Frameworks & Platforms</h3>
+                <div class="skill-items">
+                    <span class="skill-item">.NET Framework</span>
+                    <span class="skill-item">.NET MAUI</span>
+                    <span class="skill-item">ASP.NET Core</span>
+                    <span class="skill-item">Entity Framework</span>
+                    <span class="skill-item">Android SDK</span>
+                    <span class="skill-item">REST APIs</span>
+                </div>
+            </div>
+            
+            <!-- Tools & Technologies -->
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Git & GitHub</span>
+                    <span class="skill-item">XAMPP</span>
+                    <span class="skill-item">MySQL</span>
+                    <span class="skill-item">LINQ</span>
+                    <span class="skill-item">JSON</span>
+                    <span class="skill-item">HTTP/HTTPS</span>
+                    <span class="skill-item">API Integration</span>
+                    <span class="skill-item">Database Design</span>
+                </div>
+            </div>
+            
+            <!-- Development Methodologies -->
+            <div class="skill-category">
+                <h3><i class="fas fa-project-diagram"></i> Development Practices</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Full-Stack Development</span>
+                    <span class="skill-item">Mobile App Development</span>
+                    <span class="skill-item">Web Application Development</span>
+                    <span class="skill-item">Database-Driven Applications</span>
+                    <span class="skill-item">Object-Oriented Programming</span>
+                    <span class="skill-item">Agile/Team Collaboration</span>
+                    <span class="skill-item">Problem Solving & Debugging</span>
+                </div>
+            </div>
+            
+            <!-- Soft Skills -->
+            <div class="skill-category">
+                <h3><i class="fas fa-users"></i> Professional Skills</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Team Leadership</span>
+                    <span class="skill-item">Project Collaboration</span>
+                    <span class="skill-item">Requirements Analysis</span>
+                    <span class="skill-item">Technical Communication</span>
+                    <span class="skill-item">Client/Stakeholder Interaction</span>
+                    <span class="skill-item">Adaptability & Learning</span>
+                    <span class="skill-item">Time Management</span>
+                    <span class="skill-item">Presentation Skills</span>
+                </div>
+            </div>
+            
+            <!-- Languages -->
+            <div class="skill-category">
+                <h3><i class="fas fa-language"></i> Languages</h3>
+                <div class="skill-items">
+                    <span class="skill-item">English (Fluent)</span>
+                    <span class="skill-item">Northern Sotho (Native)</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Skills Proficiency Visualization - Optional Addition -->
+        <div class="skills-progress" style="margin-top: 50px;">
+            <div class="section-title" style="margin-bottom: 30px;">
+                <h3>Core Technology Proficiency</h3>
+            </div>
+            <div class="progress-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                <div class="progress-item">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>C# & .NET Ecosystem</span>
+                        <span>Advanced</span>
+                    </div>
+                    <div style="height: 8px; background-color: #e2e8f0; border-radius: 4px; overflow: hidden;">
+                        <div style="width: 85%; height: 100%; background: linear-gradient(to right, var(--primary), var(--secondary));"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Java & Android Development</span>
+                        <span>Intermediate</span>
+                    </div>
+                    <div style="height: 8px; background-color: #e2e8f0; border-radius: 4px; overflow: hidden;">
+                        <div style="width: 75%; height: 100%; background: linear-gradient(to right, var(--primary), var(--secondary));"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>PHP & Full-Stack Web</span>
+                        <span>Intermediate</span>
+                    </div>
+                    <div style="height: 8px; background-color: #e2e8f0; border-radius: 4px; overflow: hidden;">
+                        <div style="width: 70%; height: 100%; background: linear-gradient(to right, var(--primary), var(--secondary));"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Database & API Integration</span>
+                        <span>Advanced</span>
+                    </div>
+                    <div style="height: 8px; background-color: #e2e8f0; border-radius: 4px; overflow: hidden;">
+                        <div style="width: 80%; height: 100%; background: linear-gradient(to right, var(--primary), var(--secondary));"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Awards & Certifications -->
     <section id="awards">
